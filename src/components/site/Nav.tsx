@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpg.asset.json";
 
 const links = [
@@ -63,34 +62,52 @@ export default function Nav() {
           onClick={() => setOpen((v) => !v)}
           className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-border bg-card text-primary lg:hidden"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          <span className="relative flex h-4 w-5 flex-col justify-between">
+            <span
+              className={`h-0.5 w-full origin-center rounded-full bg-current transition-all duration-300 ease-in-out ${
+                open ? "translate-y-[7px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`h-0.5 w-full origin-center rounded-full bg-current transition-all duration-300 ease-in-out ${
+                open ? "scale-x-0 opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`h-0.5 w-full origin-center rounded-full bg-current transition-all duration-300 ease-in-out ${
+                open ? "-translate-y-[7px] -rotate-45" : ""
+              }`}
+            />
+          </span>
         </button>
       </div>
 
-      {open && (
-        <div className="border-t border-border bg-card lg:hidden">
-          <div className="container-page flex flex-col gap-1 py-4">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-              >
-                {l.label}
-              </a>
-            ))}
+      <div
+        className={`overflow-hidden border-border bg-card transition-[max-height,opacity] duration-300 ease-in-out lg:hidden ${
+          open ? "max-h-[28rem] border-t opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="container-page flex flex-col gap-1 py-4">
+          {links.map((l) => (
             <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 rounded-full bg-gold-gradient px-5 py-3 text-center text-sm font-bold text-gold-foreground"
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-2 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              Konsultasi Gratis
+              {l.label}
             </a>
-          </div>
+          ))}
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 rounded-full bg-gold-gradient px-5 py-3 text-center text-sm font-bold text-gold-foreground"
+          >
+            Konsultasi Gratis
+          </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }
