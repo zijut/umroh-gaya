@@ -89,6 +89,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "id_ID" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "CV. Furnama Tour Travel — Umroh & Open Trip Palembang" },
+      { name: "twitter:title", content: "CV. Furnama Tour Travel — Umroh & Open Trip Palembang" },
+      { property: "og:description", content: "Travel resmi Palembang: paket umroh, open trip & private trip domestik dan internasional dengan harga all-in dan konsultasi gratis." },
+      { name: "twitter:description", content: "Travel resmi Palembang: paket umroh, open trip & private trip domestik dan internasional dengan harga all-in dan konsultasi gratis." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a6450552-3ba4-467a-926d-0ab39de71982/id-preview-2368ac8d--4591ab40-8915-4b27-a970-2f7878b7cfae.lovable.app-1785310344405.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a6450552-3ba4-467a-926d-0ab39de71982/id-preview-2368ac8d--4591ab40-8915-4b27-a970-2f7878b7cfae.lovable.app-1785310344405.png" },
     ],
     links: [
       {
@@ -101,7 +107,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
 
