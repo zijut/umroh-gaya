@@ -8,6 +8,7 @@ const links = [
   { href: "#testimoni", label: "Testimoni" },
   { href: "#harga", label: "Harga" },
   { href: "#faq", label: "FAQ" },
+  { href: "#mitra", label: "Mitra" },
 ];
 
 export const WA_LINK =

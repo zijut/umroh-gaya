@@ -513,6 +513,23 @@ function Index() {
           </div>
 
           <div>
+            <h3 className="text-sm font-bold text-primary">Mitra</h3>
+            <div className="mt-3 flex flex-col gap-2 text-xs sm:text-sm">
+              {mitra.map((m) => (
+                <a
+                  key={m.n}
+                  href={m.web}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+                >
+                  <Globe className="h-4 w-4" /> {m.n} — {m.webLabel}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
             <h3 className="text-sm font-bold text-primary">Sosial Media</h3>
             <div className="mt-3 flex flex-col gap-2 text-xs sm:text-sm">
               <a
