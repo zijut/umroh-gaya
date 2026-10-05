@@ -483,7 +483,7 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="border-t border-border bg-card">
-        <div className="container-page grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="container-page grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3">
               <img src={logo.url} alt="Logo CV. Furnama Tour Travel" className="h-12 w-12 rounded-full object-cover" />
