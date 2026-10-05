@@ -110,6 +110,25 @@ const faq = [
   { q: "Bagaimana cara konsultasi?", a: "Klik tombol Konsultasi Gratis untuk terhubung langsung dengan admin kami di WhatsApp. Konsultasi tidak dipungut biaya dan tanpa kewajiban mendaftar." },
 ];
 
+const mitra = [
+  {
+    n: "Optibis",
+    d: "Solusi bisnis & pengembangan usaha",
+    web: "https://optibis.id",
+    webLabel: "optibis.id",
+    tel: "+6287772577020",
+    telLabel: "+62 877-7257-7020",
+  },
+  {
+    n: "Contech",
+    d: "Teknologi & solusi konstruksi",
+    web: "https://contech.id",
+    webLabel: "contech.id",
+    tel: "+6287730309409",
+    telLabel: "+62 877-3030-9409",
+  },
+];
+
 function Section({
   id,
   eyebrow,
