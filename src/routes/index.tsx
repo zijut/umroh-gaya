@@ -16,12 +16,12 @@ import {
   Users,
 } from "lucide-react";
 import Nav, { WA_LINK } from "@/components/site/Nav";
-import logo from "@/assets/logo.jpg.asset.json";
-import poster from "@/assets/poster.jpg.asset.json";
-import doc1 from "@/assets/doc1.jpg.asset.json";
-import doc2 from "@/assets/doc2.jpg.asset.json";
-import doc3 from "@/assets/doc3.jpg.asset.json";
-import doc4 from "@/assets/doc4.jpg.asset.json";
+const logo = { url: "/assets/logo.jpg" };
+const poster = { url: "/assets/poster.jpg" };
+const doc1 = { url: "/assets/doc1.jpg" };
+const doc2 = { url: "/assets/doc2.jpg" };
+const doc3 = { url: "/assets/doc3.jpg" };
+const doc4 = { url: "/assets/doc4.jpg" };
 
 const TITLE = "CV. Furnama Tour Travel — Umroh & Open Trip Palembang";
 const DESC =
