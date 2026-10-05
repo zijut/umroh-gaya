@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "@/assets/logo.jpg.asset.json";
+const logo = { url: "/assets/logo.jpg" };
 
 const links = [
   { href: "#solusi", label: "Solusi" },
