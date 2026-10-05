@@ -4,6 +4,7 @@ import {
   Building2,
   CheckCircle2,
   Clock,
+  Globe,
   HeartHandshake,
   Instagram,
   MapPin,
@@ -407,6 +408,51 @@ function Index() {
                 </summary>
                 <p className="mt-3 text-xs text-muted-foreground sm:text-sm">{f.a}</p>
               </details>
+            ))}
+          </div>
+        </Section>
+
+        {/* MITRA / GRUP */}
+        <Section
+          id="mitra"
+          tone="muted"
+          eyebrow="Mitra Kami"
+          title="Bagian dari ekosistem bisnis yang terpercaya"
+          desc="CV. Furnama Tour Travel berkolaborasi dengan mitra resmi berikut."
+        >
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+            {mitra.map((m) => (
+              <article
+                key={m.n}
+                className="flex flex-col rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8"
+              >
+                <h3 className="text-lg font-extrabold text-primary sm:text-xl">{m.n}</h3>
+                <p className="mt-1 text-xs text-muted-foreground sm:text-sm">{m.d}</p>
+                <div className="mt-5 flex flex-col gap-2.5 text-xs sm:text-sm">
+                  <a
+                    href={m.web}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 font-semibold text-primary transition-colors hover:text-gold"
+                  >
+                    <Globe className="h-4 w-4 shrink-0" /> {m.webLabel}
+                  </a>
+                  <a
+                    href={`tel:${m.tel}`}
+                    className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <Phone className="h-4 w-4 shrink-0" /> {m.telLabel}
+                  </a>
+                </div>
+                <a
+                  href={m.web}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 rounded-full bg-primary px-5 py-2.5 text-center text-xs font-bold text-primary-foreground transition-transform hover:scale-[1.02] sm:text-sm"
+                >
+                  Kunjungi Website
+                </a>
+              </article>
             ))}
           </div>
         </Section>
