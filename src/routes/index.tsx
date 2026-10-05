@@ -4,6 +4,7 @@ import {
   Building2,
   CheckCircle2,
   Clock,
+  Globe,
   HeartHandshake,
   Instagram,
   MapPin,
@@ -108,6 +109,25 @@ const faq = [
   { q: "Apakah bisa berangkat sendirian?", a: "Bisa. Open trip travelmates dirancang untuk peserta individu dengan grup kecil, sehingga tetap aman, nyaman, dan mudah berkenalan." },
   { q: "Hotel dan maskapai apa yang digunakan?", a: "Kami memakai hotel berlokasi strategis dekat destinasi utama serta maskapai resmi berjadwal. Nama hotel dan maskapai diinformasikan sebelum keberangkatan." },
   { q: "Bagaimana cara konsultasi?", a: "Klik tombol Konsultasi Gratis untuk terhubung langsung dengan admin kami di WhatsApp. Konsultasi tidak dipungut biaya dan tanpa kewajiban mendaftar." },
+];
+
+const mitra = [
+  {
+    n: "Optibis",
+    d: "Solusi bisnis & pengembangan usaha",
+    web: "https://optibis.id",
+    webLabel: "optibis.id",
+    tel: "+6287772577020",
+    telLabel: "+62 877-7257-7020",
+  },
+  {
+    n: "Contech",
+    d: "Teknologi & solusi konstruksi",
+    web: "https://contech.id",
+    webLabel: "contech.id",
+    tel: "+6287730309409",
+    telLabel: "+62 877-3030-9409",
+  },
 ];
 
 function Section({
@@ -392,6 +412,51 @@ function Index() {
           </div>
         </Section>
 
+        {/* MITRA / GRUP */}
+        <Section
+          id="mitra"
+          tone="muted"
+          eyebrow="Mitra Kami"
+          title="Bagian dari ekosistem bisnis yang terpercaya"
+          desc="CV. Furnama Tour Travel berkolaborasi dengan mitra resmi berikut."
+        >
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+            {mitra.map((m) => (
+              <article
+                key={m.n}
+                className="flex flex-col rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8"
+              >
+                <h3 className="text-lg font-extrabold text-primary sm:text-xl">{m.n}</h3>
+                <p className="mt-1 text-xs text-muted-foreground sm:text-sm">{m.d}</p>
+                <div className="mt-5 flex flex-col gap-2.5 text-xs sm:text-sm">
+                  <a
+                    href={m.web}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 font-semibold text-primary transition-colors hover:text-gold"
+                  >
+                    <Globe className="h-4 w-4 shrink-0" /> {m.webLabel}
+                  </a>
+                  <a
+                    href={`tel:${m.tel}`}
+                    className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <Phone className="h-4 w-4 shrink-0" /> {m.telLabel}
+                  </a>
+                </div>
+                <a
+                  href={m.web}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 rounded-full bg-primary px-5 py-2.5 text-center text-xs font-bold text-primary-foreground transition-transform hover:scale-[1.02] sm:text-sm"
+                >
+                  Kunjungi Website
+                </a>
+              </article>
+            ))}
+          </div>
+        </Section>
+
         {/* CTA AKHIR */}
         <section className="pb-16 sm:pb-24">
           <div className="container-page">
@@ -418,7 +483,7 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="border-t border-border bg-card">
-        <div className="container-page grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="container-page grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3">
               <img src={logo.url} alt="Logo CV. Furnama Tour Travel" className="h-12 w-12 rounded-full object-cover" />
@@ -445,6 +510,23 @@ function Index() {
               <Phone className="mt-0.5 h-4 w-4 shrink-0" />
               0821 6377 5180
             </a>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold text-primary">Mitra</h3>
+            <div className="mt-3 flex flex-col gap-2 text-xs sm:text-sm">
+              {mitra.map((m) => (
+                <a
+                  key={m.n}
+                  href={m.web}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+                >
+                  <Globe className="h-4 w-4" /> {m.n} — {m.webLabel}
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>
